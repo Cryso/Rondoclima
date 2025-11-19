@@ -1,0 +1,142 @@
+/* App.css - estilos globais do layout principal (Header/Footer/Container) */
+
+/* Reset mínimo (se já tiver index.css, adapte) */
+:root {
+  --text-dark: #0f5132;
+  --muted: #5c6b73;
+  --card-bg: #ffffff;
+}
+
+/* Theme classes that can be applied to body */
+.theme-light {
+  --page-text: #123;
+  --bg-overlay: rgba(255,255,255,0.35);
+}
+
+.theme-dark {
+  --page-text: #eee;
+  --bg-overlay: rgba(0,0,0,0.35);
+}
+
+/* Background variations based on weather */
+.bg-sunny {
+  background: linear-gradient(180deg, #87ceeb 0%, #4fa3d1 100%);
+  min-height: 100vh;
+}
+
+.bg-partly {
+  background: linear-gradient(180deg, #c3cfe2 0%, #a0b2c7 100%);
+  min-height: 100vh;
+}
+
+.bg-rain {
+  background: linear-gradient(180deg, #6a7d8a 0%, #47545d 100%);
+  min-height: 100vh;
+}
+
+.bg-storm {
+  background: linear-gradient(180deg, #3a3a3a 0%, #000000 100%);
+  min-height: 100vh;
+}
+
+.bg-default {
+  background: linear-gradient(180deg, #5a8373 0%, #3d5c4f 100%);
+  min-height: 100vh;
+}
+
+/* Header */
+.rc-header {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.rc-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.rc-logo {
+  font-size: 80px;
+  position: absolute;
+  left: -100px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.rc-titleGroup {
+  text-align: center;
+}
+
+.rc-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  color: #17304a;
+  letter-spacing: 0.6px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.rc-subtitle {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--muted);
+  opacity: 0.95;
+}
+
+/* Container (conteúdo central) */
+.rc-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  color: var(--page-text, #f1f1f1);
+}
+
+/* Footer */
+.rc-footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
+}
+
+.rc-footer-text {
+  margin: 0 auto;
+  font-size: 14px;
+  color: #123;
+  max-width: 900px;
+  line-height: 1.6;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Utility: fade-in (used by components) */
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Small responsive tweak */
+@media (max-width: 640px) {
+  .rc-logo { display: none; } /* simplify for small screens */
+  .rc-container { margin: 16px; }
+}
