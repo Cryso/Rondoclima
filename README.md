@@ -5,8 +5,8 @@ Projeto de extensão universitária que exibe clima, índice UV, previsões e qu
 
 ---
 
-## Badge
-[![Vercel Status](https://img.shields.io/endpoint?url=https://vercel.com/api/v1/badges/mayhems-projects/rondoclima/deployments)](https://rondoclima.vercel.app/)
+## Badge Vercel
+[![Deploy on Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://rondoclima.vercel.app/)
 
 ---
 
