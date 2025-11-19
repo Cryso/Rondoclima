@@ -1,7 +1,12 @@
 # RondoClima
 
-RondoClima — Monitoramento Ambiental de Rondonópolis (MT).  
+RondoClima Monitoramento Ambiental de Rondonópolis (MT).  
 Projeto de extensão universitária que exibe clima, índice UV, previsões e qualidade do ar usando APIs públicas (Open-Meteo, WAQI e OpenAQ).
+
+---
+
+## Badges
+[![Vercel](https://rondoclima.vercel.app/)]
 
 ---
 
